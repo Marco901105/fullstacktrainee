@@ -2,21 +2,102 @@
 
 var arreglo=[];
  function orden() {
+// Escribe una función que devuelve un array con todos los número del 1 al 255
+
+var arreglo=[];
+ function orden() {
    for (i=0; i<=255;i++) {
      arreglo.push(i);
-    
+
 
    }
      console.log(arreglo);
  }
 orden();
-//Escribe una función que entregue la suma de todos los número pares del 1 al 1000 
+//Escribe una función que entregue la suma de todos los número pares del 1 al 1000
 
-function num(){
-  for (i=0)
-} 
+function getPares(){
+  for (i=0; i<=1000; i++){
+    if (i%2 ==0){
+      console.log(i);
+    }
+  }
+}
+getPares();
 
-//una funcion que calcule el area de la circunferencia 
+/*
+Escribe una función que devuelva la suma de todos los valores dentro de un array
+(ej:  [1,2,5] returns 8. [-5,2,5,12] returns 14).*/
+function sum(input) {
+  if (toString.call(input) !== "[object Array]")
+  return false;
+
+  var total = 0;
+  for (var i=0; i<input.length;i++){
+    if(isNaN(input[i])){
+      continue;
+      }
+      total += Number(input[i]);
+  }
+  return total;
+}
+  console.log(sum([1, 5, 8 , 15]))
+
+/*Dado un array con múltiples valores, escribe una función que devuelva el número mayor
+(ej: para [-3,3,5,7] el número mayor (max) es 7). */
+
+function maxNum(){
+  var arr = [-3,3,5,7]
+  x=Math.max.apply(null, arr);
+  console.log(x);
+}
+maxNum();
+/* Dado un array con múltiples valores, escribe una función que devuelva el promedio de los valores
+(ej: para [1,3,5,7,20] el promedio es 7.2).*/
+function getAVG(){
+  var x = [1,3,5,7,20];
+  var sum = 0;
+  for (var i = 0; i< x.length; i++){
+     sum+= parseInt(x[i], 10);
+     }
+     var avg = sum/x.length;
+     console.log(avg);
+}
+getAVG();
+/*Escribe una funci[on que devuelva un array de todos los números impares entre 1 y 50
+(ej: [1,3,5, …, 47,49]). Pista: Usa el método ‘push’.*/
+
+function getImpares(){
+  var arr = [];
+  for (i=1;i<=50;i++){
+    if (i%2==0){
+      continue
+    }
+    arr.push(i);
+  }
+  console.log(arr);
+}
+getImpares();
+
+
+/*Dado un valor Y, escribe una función que toma un array y devuelve los valores mayores que Y.
+Por ejemplo, si arr = [1,3,5,7] y Y = 3, tu función devolverá 2 (hay 2 números en el array mayores que 3, esto son 5 y 7).*/
+
+function getGreaterThan(y, arr){
+  var arr = [1,3,5,7];
+  var counter = 0;
+  for (i=0;i<arr.length;i++){
+    if (arr[i] > y) {
+      counter +=1;
+    }
+    }
+    return counter;
+}
+console.log(getGreaterThan(3));
+
+//Escribe una función que devuelva la suma de todos los números impares entre 1 y 5000
+//una funcion que calcule el area de la circunferencia
+
 
 function getArea(x){
     /* Área de un círculo */
@@ -36,8 +117,36 @@ function getNumbers() {
     if (i%2==0 && i%3==0){
       console.log(i)
     }
-  
+
   }
-  
+
 }
 getNumbers();
+
+
+/*Dado un array con múltiples valores, escribe una función que reemplace cada valor por el cuadrado del mismo valor
+(ej: [1,5,10,-2] será [1,25,100,4]).*/
+function getSquare(){
+  var arr = [1,5,10,-2];
+  var square = arr.map(function(x){
+    return x*x;
+  });
+  console.log(square);
+}
+getSquare();
+
+/*Dado un array con múltiples valores, escribe una función que devuelva un nuevo array que solo contenga el valor mayor
+(max), menor (min) y promedio (avg) del array original (ej: [1,5,10,-2] devolverá [10,-2,3.5]). */
+function getValues(){
+  var arr = [1,5,10,-2]
+  x=Math.max.apply(null, arr);
+  y=Math.min.apply(null,arr);
+
+  var sum=0;
+  for (var i=0; i<arr.length;i++){
+    sum += parseInt(arr[i], 10);
+  }
+  var avg = sum/arr.length;
+  console.log([x,y,avg]);
+}
+getValues();
