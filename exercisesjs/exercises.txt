@@ -1,0 +1,43 @@
+// Escribe una función que devuelve un array con todos los número del 1 al 255
+
+var arreglo=[];
+ function orden() {
+   for (i=0; i<=255;i++) {
+     arreglo.push(i);
+    
+
+   }
+     console.log(arreglo);
+ }
+orden();
+//Escribe una función que entregue la suma de todos los número pares del 1 al 1000 
+
+function num(){
+  for (i=0)
+} 
+
+//una funcion que calcule el area de la circunferencia 
+
+function getArea(x){
+    /* Área de un círculo */
+  this.radius = x;
+  this.area = function (){
+    return Math.PI * x * x;
+  }
+}
+//Diametro de la circunferencia x
+var a = new getArea(5);
+console.log(a.area());
+
+// funcion que me imprima los numeros del 1 al 100 solo si son pares y multiplos e 3
+
+function getNumbers() {
+  for (var i = 0; i <= 100; i++) {
+    if (i%2==0 && i%3==0){
+      console.log(i)
+    }
+  
+  }
+  
+}
+getNumbers();
