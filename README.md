@@ -1,0 +1,2 @@
+# fullstacktrainee
+exercises
