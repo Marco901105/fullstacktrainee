@@ -1,8 +1,4 @@
-// Escribe una función que devuelve un array con todos los número del 1 al 255
-
-var arreglo=[];
- function orden() {
-// Escribe una función que devuelve un array con todos los número del 1 al 255
+//1.Escribe una funciÃ³n que devuelve un array con todos los nÃºmero del 1 al 255
 
 var arreglo=[];
  function orden() {
@@ -13,8 +9,9 @@ var arreglo=[];
    }
      console.log(arreglo);
  }
-orden();
-//Escribe una función que entregue la suma de todos los número pares del 1 al 1000
+orden();}
+
+//2. Escribe una funciÃ³n que entregue la suma de todos los nÃºmero pares del 1 al 1000
 
 function getPares(){
   for (i=0; i<=1000; i++){
@@ -25,8 +22,23 @@ function getPares(){
 }
 getPares();
 
+/*3.Escribe una funciÃ³n que devuelva la suma de todos 
+los nÃºmeros impares entre 1 y 5000 (ej: 1+3+5+...+4997+4999).*/
+
+function sumImpar(){
+  var sum=0;
+  for(i=1;i<=5000;i++){
+    if (i % 2 !=0){
+      sum+=i;
+    }
+  }
+  console.log(sum);
+}
+sumImpar();
+
+
 /*
-Escribe una función que devuelva la suma de todos los valores dentro de un array
+4.Escribe una funciÃ³n que devuelva la suma de todos los valores dentro de un array
 (ej:  [1,2,5] returns 8. [-5,2,5,12] returns 14).*/
 function sum(input) {
   if (toString.call(input) !== "[object Array]")
@@ -43,16 +55,17 @@ function sum(input) {
 }
   console.log(sum([1, 5, 8 , 15]))
 
-/*Dado un array con múltiples valores, escribe una función que devuelva el número mayor
-(ej: para [-3,3,5,7] el número mayor (max) es 7). */
+/*5.Dado un array con mÃºltiples valores, escribe una funciÃ³n que devuelva el nÃºmero mayor
+(ej: para [-3,3,5,7] el nÃºmero mayor (max) es 7). */
 
-function maxNum(){
-  var arr = [-3,3,5,7]
-  x=Math.max.apply(null, arr);
+function maxNum(y){
+
+  x=Math.max.apply(null, y);
   console.log(x);
 }
-maxNum();
-/* Dado un array con múltiples valores, escribe una función que devuelva el promedio de los valores
+maxNum([-3,3,5,7]);
+
+/* 6.Dado un array con mÃºltiples valores, escribe una funciÃ³n que devuelva el promedio de los valores
 (ej: para [1,3,5,7,20] el promedio es 7.2).*/
 function getAVG(){
   var x = [1,3,5,7,20];
@@ -64,8 +77,9 @@ function getAVG(){
      console.log(avg);
 }
 getAVG();
-/*Escribe una funci[on que devuelva un array de todos los números impares entre 1 y 50
-(ej: [1,3,5, …, 47,49]). Pista: Usa el método ‘push’.*/
+
+/* 7.Escribe una funci[on que devuelva un array de todos los nÃºmeros impares entre 1 y 50
+(ej: [1,3,5, â€¦, 47,49]). Pista: Usa el mÃ©todo â€˜pushâ€™.*/
 
 function getImpares(){
   var arr = [];
@@ -80,8 +94,8 @@ function getImpares(){
 getImpares();
 
 
-/*Dado un valor Y, escribe una función que toma un array y devuelve los valores mayores que Y.
-Por ejemplo, si arr = [1,3,5,7] y Y = 3, tu función devolverá 2 (hay 2 números en el array mayores que 3, esto son 5 y 7).*/
+/* 8.Dado un valor Y, escribe una funciÃ³n que toma un array y devuelve los valores mayores que Y.
+Por ejemplo, si arr = [1,3,5,7] y Y = 3, tu funciÃ³n devolverÃ¡ 2 (hay 2 nÃºmeros en el array mayores que 3, esto son 5 y 7).*/
 
 function getGreaterThan(y, arr){
   var arr = [1,3,5,7];
@@ -95,58 +109,68 @@ function getGreaterThan(y, arr){
 }
 console.log(getGreaterThan(3));
 
-//Escribe una función que devuelva la suma de todos los números impares entre 1 y 5000
-//una funcion que calcule el area de la circunferencia
 
-
-function getArea(x){
-    /* Área de un círculo */
-  this.radius = x;
-  this.area = function (){
-    return Math.PI * x * x;
-  }
-}
-//Diametro de la circunferencia x
-var a = new getArea(5);
-console.log(a.area());
-
-// funcion que me imprima los numeros del 1 al 100 solo si son pares y multiplos e 3
-
-function getNumbers() {
-  for (var i = 0; i <= 100; i++) {
-    if (i%2==0 && i%3==0){
-      console.log(i)
-    }
-
-  }
-
-}
-getNumbers();
-
-
-/*Dado un array con múltiples valores, escribe una función que reemplace cada valor por el cuadrado del mismo valor
-(ej: [1,5,10,-2] será [1,25,100,4]).*/
-function getSquare(){
-  var arr = [1,5,10,-2];
-  var square = arr.map(function(x){
+/* 9.Dado un array con mÃºltiples valores, escribe una funciÃ³n que reemplace cada valor por el cuadrado del mismo valor
+(ej: [1,5,10,-2] serÃ¡ [1,25,100,4]).*/
+function getSquare(y){
+  
+  var square = y.map(function(x){
     return x*x;
   });
   console.log(square);
 }
-getSquare();
+getSquare([1,5,10,-2]);
+/* 10.Dado un array con mÃºltiples valores, escribe una funciÃ³n que reemplace cualquier nÃºmero negativo dentro del array por 0. 
+Cuando el programa estÃ© listo, el array no debiera contener nÃºmeros negativos (ej: [1,5,10,-2] se convertirÃ¡ en [1,5,10,0]).*/
+function numRemplace(x){
+  var index = x.indexOf(x<0);
+  for (i=0; i<x.length; i++){
+    if (x[i]<0){
+      x[i]=0;
+    }
+  }
+  console.log(x);
+}
+numRemplace([1,-5,-8,10]);
 
-/*Dado un array con múltiples valores, escribe una función que devuelva un nuevo array que solo contenga el valor mayor
-(max), menor (min) y promedio (avg) del array original (ej: [1,5,10,-2] devolverá [10,-2,3.5]). */
-function getValues(){
-  var arr = [1,5,10,-2]
-  x=Math.max.apply(null, arr);
-  y=Math.min.apply(null,arr);
+
+/* 11. Dado un array con mÃºltiples valores, escribe una funciÃ³n que devuelva un nuevo array que solo contenga el valor mayor
+(max), menor (min) y promedio (avg) del array original (ej: [1,5,10,-2] devolverÃ¡ [10,-2,3.5]). */
+function getValues(z){
+  x=Math.max.apply(null, z);
+  y=Math.min.apply(null,z);
 
   var sum=0;
-  for (var i=0; i<arr.length;i++){
-    sum += parseInt(arr[i], 10);
+  for (var i=0; i<z.length;i++){
+    sum += parseInt(z[i], 10);
   }
-  var avg = sum/arr.length;
+  var avg = sum/z.length;
   console.log([x,y,avg]);
 }
-getValues();
+getValues([1,5,10,-2]);
+
+/* 12.Escribe una funciÃ³n que intercambie el primer y el Ãºltimo valor de cualquier array. 
+La extensiÃ³n mÃ­nima predeterminada del array es 2 (ej: [1,5,10,-2] serÃ¡ [-2,5,10,1]). */
+function getSwap(x){
+  
+   for (i= 0; x.length>=2;i++){
+        [x[0], x[x.length - 1]] = [x[x.length -1] , x[0]];
+        return x;     
+   }
+  }
+  getSwap([1,3,10,-2]);
+
+/* 13.Escribe una funciÃ³n que tome un array de nÃºmeros y reemplace cualquier valor negativo por el string â€˜Dojoâ€™. 
+Por ejemplo, dado el array = [-1,-3,2], tu funciÃ³n devolverÃ¡ [â€˜Dojoâ€™,â€˜Dojoâ€™,2].*/
+function stringRemplace(x){
+  var index = x.indexOf(x<0);
+
+  for (var i = 0; i < x.length; i++){
+    if (x[i] < 0){
+      x[i] = 'Dojo';
+    }
+  }
+ console.log(x);
+}
+stringRemplace([-1, -3, 2]);
+
