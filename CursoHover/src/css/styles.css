@@ -1,0 +1,11 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {}
+
+.cont-image {
+    height: 150px;
+    overflow: hidden;
+}
